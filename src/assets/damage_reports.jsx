@@ -12,26 +12,26 @@ const DamageReports = () => {
 
   const [reports, setReports] = useState([
     
-    { id: 1, location: "Mumbai, Maharashtra", severity: "High", status: "Pending", date: "2025-02-25" },
-  { id: 2, location: "Delhi", severity: "Medium", status: "Resolved", date: "2025-02-20" },
-  { id: 3, location: "Bangalore, Karnataka", severity: "High", status: "Pending", date: "2025-03-05" },
-  { id: 4, location: "Hyderabad, Telangana", severity: "Low", status: "Resolved", date: "2025-03-02" },
-  { id: 5, location: "Chennai, Tamil Nadu", severity: "Medium", status: "In Progress", date: "2025-03-10" },
-  { id: 6, location: "Kolkata, West Bengal", severity: "High", status: "Pending", date: "2025-03-08" },
-  { id: 7, location: "Pune, Maharashtra", severity: "Low", status: "Resolved", date: "2025-02-28" },
-  { id: 8, location: "Ahmedabad, Gujarat", severity: "Medium", status: "In Progress", date: "2025-03-12" },
-  { id: 9, location: "Jaipur, Rajasthan", severity: "High", status: "Pending", date: "2025-03-15" },
-  { id: 10, location: "Lucknow, Uttar Pradesh", severity: "Medium", status: "Resolved", date: "2025-03-18" },
-  { id: 11, location: "Indore, Madhya Pradesh", severity: "High", status: "Pending", date: "2025-03-22" },
-  { id: 12, location: "Bhopal, Madhya Pradesh", severity: "Low", status: "Resolved", date: "2025-03-25" },
-  { id: 13, location: "Thiruvananthapuram, Kerala", severity: "Medium", status: "In Progress", date: "2025-03-28" },
-  { id: 14, location: "Patna, Bihar", severity: "High", status: "Pending", date: "2025-04-02" },
-  { id: 15, location: "Chandigarh", severity: "Low", status: "Resolved", date: "2025-04-05" },
-  { id: 16, location: "Guwahati, Assam", severity: "Medium", status: "In Progress", date: "2025-04-10" },
-  { id: 17, location: "Coimbatore, Tamil Nadu", severity: "High", status: "Pending", date: "2025-04-12" },
-  { id: 18, location: "Mysore, Karnataka", severity: "Low", status: "Resolved", date: "2025-04-15" },
-  { id: 19, location: "Nagpur, Maharashtra", severity: "Medium", status: "In Progress", date: "2025-04-18" },
-  { id: 20, location: "Visakhapatnam, Andhra Pradesh", severity: "High", status: "Pending", date: "2025-04-20" }
+    { id: 1, location: "Mumbai, Maharashtra", severity: "High", status: "Pending", date: "2025-02-25", lat:19.0760,lng:72.8777 },
+  { id: 2, location: "Delhi", severity: "Medium", status: "Resolved", date: "2025-02-20",lat: 28.7041, lng: 77.1025},
+  { id: 3, location: "Bangalore, Karnataka", severity: "High", status: "Pending", date: "2025-03-05",lat: 12.9716, lng: 77.5946 },
+  { id: 4, location: "Hyderabad, Telangana", severity: "Low", status: "Resolved", date: "2025-03-02",lat: 17.3850, lng: 78.4867 },
+  { id: 5, location: "Chennai, Tamil Nadu", severity: "Medium", status: "In Progress", date: "2025-03-10",lat: 13.0827, lng: 80.2707  },
+  { id: 6, location: "Kolkata, West Bengal", severity: "High", status: "Pending", date: "2025-03-08",lat: 22.5726, lng: 88.3639 },
+  { id: 7, location: "Pune, Maharashtra", severity: "Low", status: "Resolved", date: "2025-02-28",lat: 18.5204, lng: 73.8567 },
+  { id: 8, location: "Ahmedabad, Gujarat", severity: "Medium", status: "In Progress", date: "2025-03-12",lat: 23.0225, lng: 72.5714 },
+  { id: 9, location: "Jaipur, Rajasthan", severity: "High", status: "Pending", date: "2025-03-15",lat: 26.9124, lng: 75.7873 },
+  { id: 10, location: "Lucknow, Uttar Pradesh", severity: "Medium", status: "Resolved", date: "2025-03-18",lat: 26.8467, lng: 80.9462 },
+  { id: 11, location: "Indore, Madhya Pradesh", severity: "High", status: "Pending", date: "2025-03-22" ,lat: 22.7196, lng: 75.8577},
+  { id: 12, location: "Bhopal, Madhya Pradesh", severity: "Low", status: "Resolved", date: "2025-03-25",lat: 23.2599, lng: 77.4126 },
+  { id: 13, location: "Thiruvananthapuram, Kerala", severity: "Medium", status: "In Progress", date: "2025-03-28",lat: 8.5241, lng: 76.9366},
+  { id: 14, location: "Patna, Bihar", severity: "High", status: "Pending", date: "2025-04-02" ,lat: 25.5941, lng: 85.1376},
+  { id: 15, location: "Chandigarh", severity: "Low", status: "Resolved", date: "2025-04-05",lat: 30.7333, lng: 76.7794 },
+  { id: 16, location: "Guwahati, Assam", severity: "Medium", status: "In Progress", date: "2025-04-10",lat: 26.1445, lng: 91.7362 },
+  { id: 17, location: "Coimbatore, Tamil Nadu", severity: "High", status: "Pending", date: "2025-04-12",lat: 11.0168, lng: 76.9558  },
+  { id: 18, location: "Mysore, Karnataka", severity: "Low", status: "Resolved", date: "2025-04-15",lat: 12.2958, lng: 76.6394 },
+  { id: 19, location: "Nagpur, Maharashtra", severity: "Medium", status: "In Progress", date: "2025-04-18",lat: 21.1458, lng: 79.0882},
+  { id: 20, location: "Visakhapatnam, Andhra Pradesh", severity: "High", status: "Pending", date: "2025-04-20",lat: 17.6868, lng: 83.2185}
   ]);
 
   const [filteredReports,setFilteredReports] = useState(reports);
