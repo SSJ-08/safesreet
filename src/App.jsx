@@ -6,8 +6,8 @@ import Sidebar from "./assets/sidebar";
 import Home from "./assets/home";
 import Damage_Reports from "./assets/damage_reports";
 import Welcome from "./assets/welcome";
-// import Login from "./assets/Login";
-// import Register  from "./assets/Register";
+import Login from "./assets/login";
+import Register  from "./assets/register";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
@@ -28,8 +28,8 @@ function App() {
         <main className="main-content">
           <Routes>
           <Route path="/" element={<Welcome/>} />
-             {/* <Route path="/Login" element={<Login />} /> 
-             <Route path="/Register" element={<Register />}/> */}
+              <Route path="/login" element={<Login />} /> 
+             <Route path="/register" element={<Register />}/> 
             <Route path="/home" element={<Home/>}/>
             <Route path="/damage_reports" element={<Damage_Reports />} />
            
