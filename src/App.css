@@ -128,7 +128,8 @@ body{
   overflow: hidden;
   padding: 20px 20px;
   color: aliceblue;
-  width: 210%;
+  width: 150%;
+
  
 }
 .main-title{
@@ -138,10 +139,10 @@ body{
 .main-cards{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 20px;
+  gap: 100px;
   margin: 15px 0;
+  grid-template-columns: repeat(3,1fr);
   
-
 }
 
 .card{
@@ -150,9 +151,9 @@ body{
   justify-content: space-around;
   padding: 8px 15px;
   border-radius: 5px;
-  grid-template-columns: repeat(2,1fr);
+  
   gap: 20px;
-  width: 80%;
+  width: 100%;
   
 }
 
@@ -215,8 +216,10 @@ body{
   padding: 20px;
   background-color: #aed278;
   min-height: 100vh;
-  width: 210%;
+  width: 133%;
   /* display: flex; */
+  height: 100%;
+  
 }
 
 .damage-reports-content {
@@ -307,12 +310,15 @@ body{
   }
 }
 
+/* welcome page */
 .welcome-container{
   justify-content: center;
-  font-size: 40px;
+  font-size: 35px;
   font-family: cursive;
   padding-left: 500px;
-  padding-top: 100px;
+  padding-top: 70px;
+  height: 300px;
+  /* display: flex; */
 }
 .tagline{
  font-size: 30px;
@@ -457,24 +463,21 @@ body{
 
 
 /* register page */
-/* Futuristic Theme */
-/* body {
-  background: url("src/assets/images/road_background.webp") no-repeat center center/cover;
-  font-family: 'Arial', sans-serif;
-} */
+
+
 
 .register-container {
   background: url("src/assets/images/road_background.webp") no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 92vh;
   background-size: cover;
-  width: 1050px;
+  width: 1700px;
 }
 
 .register-card {
-  background: rgba(0, 0, 0, 0.8);
+  background: #263043;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
@@ -484,7 +487,7 @@ body{
 
 .title {
   color: #fff;
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 20px;
 }
 
@@ -496,16 +499,21 @@ body{
   display: block;
   color: #fff;
   margin-bottom: 5px;
+  margin-left: 10px;
+  font-size: large;
+  text-align: left;
 }
 
 .input-group input {
-  width: 100%;
+  width: 125%;
   padding: 10px;
   border: none;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
   font-size: 16px;
+  text-align: left;
+  
 }
 
 .input-group input:focus {
@@ -514,17 +522,28 @@ body{
 }
 
 .register-btn {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   border: none;
   border-radius: 5px;
   background: #28a745;
   color: white;
-  font-size: 18px;
+  font-size: 22px;
   cursor: pointer;
   transition: 0.3s;
+  margin: auto;
 }
 
 .register-btn:hover {
   background: #218838;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.reference a{
+  color: #eceaff;
 }
