@@ -3,15 +3,14 @@ import "../App.css";
 import "leaflet/dist/leaflet.css"; 
 import { MapContainer,TileLayer,Marker,Popup } from "react-leaflet";
 import { useLocation } from "react-router-dom";
-console.log("DamageReports Component Loaded!");
 
-const DamageReports = () => {
+
+const Damage_Reports = () => {
   const location=useLocation();
   const queryParams = new URLSearchParams(location.search);
   const filter = queryParams.get("filter");
 
   const [reports, setReports] = useState([
-    
     { id: 1, location: "Mumbai, Maharashtra", severity: "High", status: "Pending", date: "2025-02-25", lat:19.0760,lng:72.8777 },
   { id: 2, location: "Delhi", severity: "Medium", status: "Resolved", date: "2025-02-20",lat: 28.7041, lng: 77.1025},
   { id: 3, location: "Bangalore, Karnataka", severity: "High", status: "Pending", date: "2025-03-05",lat: 12.9716, lng: 77.5946 },
@@ -50,14 +49,31 @@ const DamageReports = () => {
     }
   }, [filter,reports]);
   
+  // Function to send email notification
+  // const handleSendNotification = async (userEmail, reportId) => {
+  //   try {
+  //     const response = await fetch("http://localhost:5000/send-update", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({ userEmail, reportId }),
+  //     });
+
+  //     const data = await response.json();
+  //     alert(data.message); // Show success message
+  //   } catch (error) {
+  //     console.error("Failed to send email", error);
+  //   }
+  // };
+
+  
 
   return (
     <div className="damage-reports-container">
       <h1 className="damage-reports-header">Damage Reports</h1>
 
-      {/* ✅ Layout for Table + Map */}
+      {/*  Layout for Table + Map */}
       <div className="damage-reports-content">
-        {/* ✅ Damage Reports Table */}
+        {/*  Damage Reports Table */}
         <div className="damage-reports-table">
           <table>
             <thead>
@@ -81,13 +97,22 @@ const DamageReports = () => {
                     {report.status}
                   </td>
                   <td>{report.date}</td>
+                  {/* <td>
+                    {report.status === "Pending" && (
+                      <button onClick={() => handleSendNotification("user@example.com", report.id)}>
+                        Mark as Reviewed & Notify
+                      </button>
+                    )}
+                  </td> */}
+               
+
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
 
-        {/* ✅ Map Component */}
+        {/*  Map Component */}
         <div className="map-container">
           <MapContainer center={[20.5937, 78.9629]} zoom={5} scrollWheelZoom={false} className="leaflet-container">
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
@@ -99,7 +124,7 @@ const DamageReports = () => {
                   Severity: {report.severity} <br />
                   Status: {report.status} <br />
                   Date: {report.date}
-                </Popup>
+                </Popup> 
               </Marker>
             ))}
           </MapContainer>
@@ -110,4 +135,7 @@ const DamageReports = () => {
 };
 
 
-export default DamageReports;
+export default Damage_Reports;
+
+
+
