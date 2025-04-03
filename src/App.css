@@ -670,18 +670,18 @@ button:hover {
 
 
 /* contact page */
-.contact-container {
+.contact-details {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 76vw;
-  min-height: 100vh;
-  padding: 20px;
-  background-color: #162c42;
-  
+  /* flex-direction: row; */
+  justify-content: space-between;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  gap: 50px;
+  /* margin: 15px; */
+  /* flex-wrap: wrap; */
+  width: 80%;
+  /* grid-template-columns: repeat(1,1fr); */
 }
+
 
 
 
