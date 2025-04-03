@@ -1,6 +1,14 @@
+
 import React from "react";
 import "../App.css";
+
 const Contact = () => {
+  // Function to handle form submission
+  const handleSubmit = (event) => {
+    // event.preventDefault(); 
+    alert(" Query noted! We will get back to you soon.");
+  };
+
   return (
     <div className="contact-container">
       <h1>Contact Us</h1>
@@ -28,7 +36,7 @@ const Contact = () => {
 
       <div className="contact-form">
         <h2>Send Us a Message</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>Name:</label>
           <input type="text" placeholder="Enter your name" required />
 
